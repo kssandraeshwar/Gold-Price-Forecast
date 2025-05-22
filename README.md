@@ -75,21 +75,6 @@ Data is sourced from a historical financial dataset and includes the following f
 
 ---
 
-## 📦 How to Run
 
-1. Clone this repo
-2. Open the Colab notebook: `Gold_Price_Forecast.ipynb`
-3. Run cells step-by-step (install libraries if required)
-4. Compare results and visualize outputs
-
----
-
-## 📌 Future Work
-
-- Hyperparameter tuning for LSTM & XGBoost
-- Incorporate more macroeconomic indicators
-- Real-time prediction dashboard using Streamlit
-
----
 
 
