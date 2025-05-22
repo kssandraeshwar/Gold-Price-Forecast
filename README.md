@@ -1,80 +1,83 @@
-# 🟡 Gold Price Forecasting Using Time Series & Machine Learning
 
-This project aims to accurately **predict the future price of gold (GLD)** using a variety of forecasting models, including deep learning (LSTM), machine learning (XGBoost, Random Forest), and statistical approaches (ARIMA, Prophet). The best results were obtained using a **Multivariate LSTM model** incorporating multiple economic indicators.
 
----
+#  Gold Price Forecasting Using Time Series & Machine Learning
 
-## 📌 Objective
-
-- Forecast gold prices using **time series and machine learning techniques**.
-- Compare model performances across univariate and multivariate settings.
-- Analyze the influence of features like stock indices, oil prices, silver, and forex on gold.
+This project aims to accurately predict the future price of gold (GLD) using a variety of forecasting models, including deep learning (LSTM), machine learning (XGBoost, Random Forest), and statistical approaches (ARIMA, Prophet). The best results were achieved using a **Multivariate LSTM model** that incorporates various economic indicators.
 
 ---
 
-## 📊 Dataset Description
+##  Objective
 
-Data is sourced from a historical financial dataset and includes the following features:
-
-| Feature     | Description                                 |
-|-------------|---------------------------------------------|
-| `Date`      | Date of observation                         |
-| `GLD`       | Gold ETF closing price                      |
-| `SPX`       | S&P 500 Index                               |
-| `USO`       | United States Oil Fund                      |
-| `SLV`       | Silver ETF                                  |
-| `EUR/USD`   | Euro to US Dollar exchange rate             |
+* Forecast gold prices using time series and machine learning techniques
+* Compare model performances across univariate and multivariate settings
+* Analyze the influence of external features such as stock indices, oil prices, silver, and forex rates on gold
 
 ---
 
-## 🔍 Models Implemented
+##  Dataset Description
 
-| Model Type          | Model Used           | Input Type        |
-|---------------------|----------------------|-------------------|
-| ✅ Deep Learning     | LSTM (Univariate)    | Only GLD          |
-| ✅ Deep Learning     | **Multivariate LSTM**| All features      |
-| 🔁 Statistical       | ARIMA                | GLD               |
-| 🔁 Statistical       | Prophet              | GLD               |
-| 🤖 Machine Learning  | XGBoost Regressor    | All features      |
-| 🤖 Machine Learning  | Random Forest        | All features      |
+Historical financial data including:
 
----
-
-## ✅ Model Evaluation
-
-| Model             | RMSE     | MAE      |
-|------------------|----------|----------|
-| LSTM (Univariate) | Moderate | Moderate |
-| **LSTM (Multivariate)** | ✅ **Low**   | ✅ **Low**   |
-| ARIMA             | Moderate | Moderate |
-| Prophet           | Moderate | Moderate |
-| XGBoost           | Good     | Good     |
-| Random Forest     | Good     | Good     |
-
-> The **Multivariate LSTM** performed best in terms of RMSE and MAE.
+| Feature | Description                     |
+| ------- | ------------------------------- |
+| Date    | Date of observation             |
+| GLD     | Gold ETF closing price          |
+| SPX     | S\&P 500 Index                  |
+| USO     | United States Oil Fund          |
+| SLV     | Silver ETF                      |
+| EUR/USD | Euro to US Dollar exchange rate |
 
 ---
 
-## 📈 Visual Output
+##  Models Implemented
 
-- Actual vs Predicted Gold Prices (LSTM & Others)
-- Loss Curves (Training vs Validation)
-- Feature Correlation Heatmap
-- Time Series Line Plots
-
----
-
-## 🔧 Tech Stack
-
-- Python
-- Pandas, NumPy, Scikit-Learn
-- TensorFlow / Keras
-- XGBoost
-- Facebook Prophet
-- Matplotlib / Seaborn
+| Model Type          | Model Used          | Input Type   |
+| ------------------- | ------------------- | ------------ |
+| ✅ Deep Learning     | LSTM (Univariate)   | Only GLD     |
+| ✅ Deep Learning     | LSTM (Multivariate) | All features |
+| 🔁 Statistical      | ARIMA               | GLD          |
+| 🔁 Statistical      | Prophet             | GLD          |
+| 🤖 Machine Learning | XGBoost Regressor   | All features |
+| 🤖 Machine Learning | Random Forest       | All features |
 
 ---
 
+##  Model Evaluation
 
+| Model               | RMSE     | MAE      |
+| ------------------- | -------- | -------- |
+| LSTM (Univariate)   | Moderate | Moderate |
+| LSTM (Multivariate) | ✅ Low    | ✅ Low    |
+| ARIMA               | Moderate | Moderate |
+| Prophet             | Moderate | Moderate |
+| XGBoost             | Good     | Good     |
+| Random Forest       | Good     | Good     |
 
+ **Multivariate LSTM gave the best performance** with the lowest RMSE and MAE.
 
+---
+
+##  Visual Outputs
+
+* ✅ Actual vs. Predicted Gold Prices (across all models)
+* ✅ Loss Curves (Training vs. Validation for LSTM)
+* ✅ Forecasting Graphs (Prophet, ARIMA, etc.)
+* ✅ Time Series Line Plots (GLD, SPX, USO, etc.)
+
+---
+
+##  Tech Stack
+
+* **Language**: Python
+* **Libraries**:
+
+  * Pandas, NumPy
+  * Scikit-Learn
+  * TensorFlow / Keras
+  * XGBoost
+  * Facebook Prophet
+  * Matplotlib, Seaborn
+
+---
+
+Let me know if you’d like this saved as a Markdown file or need a version with embedded visuals.
